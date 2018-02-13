@@ -137,8 +137,8 @@
        && [message to]
        && ![message isErrorMessage] && ![[[message attributeForName:@"type"] stringValue] isEqualToString:@"groupchat"]
        && [[message elementID] length]
-       && ![message hasReceiptRequest] && ![message hasReceiptResponse])
-        && ![message hasChatState] //disable delivery receipt request for chat state only in connect
+       && ![message hasReceiptRequest] && ![message hasReceiptResponse]
+        && ![message hasChatState]) //disable delivery receipt request for chat state only in connect
     {
         
 #ifdef _XMPP_CAPABILITIES_H
