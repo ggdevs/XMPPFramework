@@ -410,12 +410,15 @@
 
 - (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)message
 {
+    //Disabled because in connect app we manually save message into db.
+    /*
 	XMPPLogTrace();
 	
 	if ([self shouldArchiveMessage:message outgoing:YES xmppStream:sender])
 	{
 		[xmppMessageArchivingStorage archiveMessage:message outgoing:YES xmppStream:sender];
 	}
+     */
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
